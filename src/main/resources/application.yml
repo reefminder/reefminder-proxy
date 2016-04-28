@@ -4,7 +4,7 @@ zuul:
   routes:
     ui:
       path: /**
-      url: http://localhost:9000
+      url: http://localhost:8080
 server:
   port: 8800
 
