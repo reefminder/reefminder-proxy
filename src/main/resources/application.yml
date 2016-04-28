@@ -1,0 +1,35 @@
+spring:
+    profiles: local
+zuul:
+  routes:
+    ui:
+      path: /**
+      url: http://localhost:9000
+server:
+  port: 8800
+
+---
+
+spring:
+    profiles: localtest
+zuul:
+  routes:
+    ui:
+      path: /**
+      url: http://localhost:9001
+server:
+  port: 8801
+
+---
+
+spring:
+    profiles: dev
+zuul:
+  routes:
+    api:
+      path: xxx
+      url: xxx
+      strip-prefix: true
+    ui:
+      path: /**
+      url: xx
